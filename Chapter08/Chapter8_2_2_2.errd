@@ -1,0 +1,1 @@
+Chapter8_2_2_2.java:28: Variable e may not have been initialized.                while (e != null) {                       ^1 error

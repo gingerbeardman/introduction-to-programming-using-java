@@ -1,0 +1,7 @@
+Program1.java:5: Undefined variable, class, or package name: Sistem
+                Sistem.out.println("This is my first Java program");
+                ^
+Program1.java:6: Undefined variable, class, or package name: Sistem
+                Sistem.out.println("but it won't be my last.");
+                ^
+2 errors

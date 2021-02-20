@@ -1,0 +1,5 @@
+*** Error - test failure: Just a test
+java.lang.Exception: Stack trace
+        at java.lang.Thread.dumpStack(Thread.java:892)
+        at TestHelper.verify(TestHelper.java:11)
+        at Test.main(Test.java:7)

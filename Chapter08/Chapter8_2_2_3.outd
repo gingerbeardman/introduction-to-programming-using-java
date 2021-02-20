@@ -1,0 +1,5 @@
+Employee Gerald Weiss has earned 200
+java.lang.NumberFormatException: David Arnow
+        at java.lang.Integer.parseInt(Integer.java:231)
+        at java.lang.Integer.parseInt(Integer.java:278)
+        at Chapter8_2_2_3.main(Chapter8_2_2_3.java:44)

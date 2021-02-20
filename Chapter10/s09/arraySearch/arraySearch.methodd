@@ -1,0 +1,1 @@
+	boolean search(String s) {	// Returns true if and only if s equals one 					//      of the Strings in v.		int k;		// k== the index of the next position in 				//      the array to check.				// No match has been found in positions 				//      0 through k-1.		k = 0;		while (k!=v.length && !s.equals(v[k]))			k++;		// k==v.length || s.equals(v[k])		return k!=v.length;	}

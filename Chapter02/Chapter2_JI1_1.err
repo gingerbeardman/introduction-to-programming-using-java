@@ -1,0 +1,10 @@
+D:\users\YUDY\Java Book\CODE\Chapter 2>javac Chapter2_JI1_1.java
+Chapter2_JI1_1.java:11: Incompatible type for =. Can't convert java.io.PrintStre
+am to java.lang.String.
+                s = System.out;
+                  ^
+Chapter2_JI1_1.java:12: Incompatible type for =. Can't convert java.lang.String
+to java.io.PrintStream.
+                p = "Hello";
+                  ^
+2 errors

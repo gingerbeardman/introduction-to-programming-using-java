@@ -1,0 +1,1 @@
+		int     largest;		int     x;		largest  =  0;		String line;		largest  =  Integer.parseInt(br.readLine());		line  =  br.readLine();		while (line!=null) {			x  =  Integer.parseInt(line);			if (x>largest)				largest = x;			line  =  br.readLine();		}		System.out.println("Largest integer is "+largest);

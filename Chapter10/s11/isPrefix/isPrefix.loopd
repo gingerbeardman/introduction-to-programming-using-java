@@ -1,0 +1,1 @@
+		int k;	// Position k is the next one to check; the Strings match in all 			//      positions before k.		k  =  0;		while  (k!=s1.length()  &&  k!=s2.length()  &&  s1.charAt(k)==s2.charAt(k))			k++;		boolean  s1IsAPrefix  =  k==s1.length();

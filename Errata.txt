@@ -1,0 +1,137 @@
+Errata
+
+---------
+Chapter 1
+---------
+
+- page 11 - The code for class Program1 is missing the last three 
+	lines. The correct class definition is:
+
+	class Program1 {
+		public static void main(String arg[]) {
+			System.out.println("This is my first Java program");
+			System.out.println(" but it won't be my last.");	
+		}
+	}
+
+---------
+Chapter 3
+---------
+
+- page 72 - The problem with PrintStream output not being flushed
+	seems to have dissappeared (at least on the test Wintel and 
+	Unix platforms). This does not introduce any errors into code,
+	however the discussion on flushing becomes somewhat moot.
+
+---------
+Chapter 4
+---------
+
+- page 123 - The read and readi methods of the revised Name
+	class are missing a 'throws Exception' in the method headers.
+	The correct headers are:
+		public static Name read(BufferedReader br) throws Exception {
+	and:
+		public static Name readi(InteractiveIO io) throws Exception {
+
+- page 138 - To avoid 'deprecated API' warnings, the methods
+	resize and size should be replaced with setSize and getSize, 
+	respectively.
+
+---------
+Chapter 5
+---------
+
+- page 147, 150 - in sections 5.4.8 the correct method name should be
+	displayData, not displayTotals. displayData is the name
+	used in the rest of the TollBooth class development. Similarly,
+	in section 5.4.12, the TestTollBooth class incorrectly invokes
+	the method DisplayTotals rather than the correct DisplayData.
+
+- page 157 - The declaration of the constants incorrectly has
+	semicolons after DuePerHalfTon and TonInPounds. They should
+	be commas. Also the formula for tollDue should not have the '5'
+	after DuePerAxle.
+
+---------
+Chapter 6
+---------
+
+- page 196, 197, 198 - The calcPay method's return statement is
+	missing. The last line of that method (before the closing brace)
+	should be:
+		return pay;
+
+- page 193, 198 - The sample usage code in the middle of page 193,
+	and later in the Payroll class on page 198 contains a pair
+	of incorrect calls to the calcPay method. The first:
+		e.calcPay(30)
+	does not assign the returned value to a variable; the second
+		pay = e.calcPay(hours)
+	uses an undeclared variable 'hours'. The correct sample usage 
+	should read:
+		Employee 	e;
+		e = new Employee("Rudy Crew", 10);
+		int pay;
+		pay = e.calcPay(30);
+		System.out.print(e.getName());
+		System.out.print(" earned ");
+		System.out.println(pay);
+
+- page 212, 215 - The public Time constructor is incorrectly missing 
+	the calculation	of the 'totalMinutes' instance variable. The
+	correct version of the constructor is:
+		public Time(int hours, int minutes, String amOrPm) {
+			if (amOrPm.equals("am")) {
+				if (hours==12)
+					hours = 0;
+			}
+			else	// pm
+				if (hours!=12)
+					hours += 12;
+			totalMinutes = hours * 60 + minutes;
+		}
+
+- page 213 - The print method has the test for 12pm omitted. The
+	correct code for the afternoon case is:
+		if(hours>=12){
+			isAfternoon=true;
+			if (hours != 12)
+				hours-=12;
+		}
+
+- page 210 and 216 - The sample usage code on page 210 and the
+	same code in the TimeUser class has the incorrect test:
+		t3.isAfter(t4)
+	The correct test (based upon the subsequent assignments to 
+	the 'earlier' and 'later' variables is:
+		t3.isBefore(t4)
+	
+- page 239-243 - To avoid 'deprecated API' warnings, the methods
+	resize and size should be replaced with setSize and getSize, 
+	respectively.
+
+---------
+Chapter 7
+---------
+
+- page 250, 253 - The Employee class definition does not include
+	a getRate method, which is used in the various testDriver 
+	methods. Replace the invocation of getRate with a direct 
+	access of the rate instance variable. Thus:
+		System.out.print("Rate: ");
+		System.out.println(e.getRate());
+	should be replaced by:
+		System.out.print("Rate: ");
+		System.out.println(e.rate);
+
+- page 255 - The invocation of TestHelper.verify for the 
+	testing of the calcPay result should read:
+		TestHelper.verify(computedPay == correctAnswer, "calcPay test");
+	rather than the incorrect
+		TestHelper.verify(computedPay != correctAnswer, "calcPay test");
+
+- page 261 - The declaration of the Employee object should read:
+		Employee e = new Employee("James Arnold", 20);
+	rather than:
+		Employee e = new Employee("James", "Arnold", 20);

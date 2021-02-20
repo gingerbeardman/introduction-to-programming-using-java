@@ -1,0 +1,1 @@
+		int     klines = 0; // klines==the number of lines read and printed so far.		int     header;     // header==the number of lines available from input.		header  =  Integer.parseInt(br.readLine());		while (klines!=header) {			System.out.println(br.readLine());			klines++;		}

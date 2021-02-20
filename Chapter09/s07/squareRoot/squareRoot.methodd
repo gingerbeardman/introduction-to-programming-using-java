@@ -1,0 +1,1 @@
+bboolean closeEnough(double x, double y, double precision) {		return Math.abs(y*y-x) <= precision;	}	// squareRoot returns square root of x within the given precision.	private double squareRoot(double x, double precision) {		double y;		y = x;		while (!closeEnough(x, y, precision))			y = (y+x/y) / 2.0;		return y;	}

@@ -1,0 +1,5 @@
+--- In the method 'needsThis'
+s = I am the local variable
+this.s = I am the instance variable
+--- In the method 'doesNotNeedThis'
+s = I am the instance variable

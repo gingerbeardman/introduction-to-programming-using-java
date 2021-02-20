@@ -1,0 +1,1 @@
+		Enumeration    e = v.elements();		String  s;		String  longest = null;	// The longest String encountered so far or null					//      if no String has been encountered.		while (e.hasMoreElements()) {			s = (String) e.nextElement();			if (longest==null || s.length()>longest.length())				longest = s;		}		System.out.println("Longest String is ".concat(longest));

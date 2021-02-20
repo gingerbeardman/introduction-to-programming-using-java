@@ -1,0 +1,1 @@
+	Employee  getHighestPaid(Enumeration  e)		if  (!e.hasMoreElements())			return null;		Employee   oneEmployee,  highestOfThoseLeft;		emp  =  (Employee)  e.nextElement();		highestOfThoseLeft  =  getHighestPaid(e);		if  (highestOfThoseLeft==null				|| highestOfThoseLeft.getPay() < emp.getPay())			return  emp;		else			return  highestOfThoseLeft;	}

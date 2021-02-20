@@ -1,0 +1,1 @@
+	//  Returns true if s is among v[first], ..., v[beyond21]	boolean  bsearch(String s, Vector  v,  int  first,  int  beyond)  {		if  (first>=beyond)			return  false;		int  m  =  (first+beyond)/2;		String sm  =  (String)  v.elementAt(m);		if  (sm.compareTo(s)<0)			return  bsearch(s,v,m+1,beyond);		if  (sm.compareTo(s)>0)			return  bsearch(s,v,first,m);		return  true;	}

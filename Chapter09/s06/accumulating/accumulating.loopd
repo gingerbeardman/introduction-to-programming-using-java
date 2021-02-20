@@ -1,0 +1,1 @@
+	String s = "";	String line;	line = br.readLine();	while (line!=null) {		if (line.substring(0,1).equals(":"))			s = s.concat(line);		line = br.readLine();	}

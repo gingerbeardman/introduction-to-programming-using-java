@@ -1,0 +1,1 @@
+	int power(int x, int y) {    // y>=0, returns x**y		int    assistantResult;		if  (y==0)			return 1;		else {			assistantResult = power(x,y-1);			return x*assistantResult;		}	}

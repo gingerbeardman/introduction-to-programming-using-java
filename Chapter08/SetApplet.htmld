@@ -1,0 +1,1 @@
+<!--	Introduction to Programming Using Java: An Object-Oriented Approach		Arnow/Weiss		Chapter 6 / GUI Supplement 1 / Page 231			Notes:		An applet is embedded in a web page by specifying the			applet in the HTML file for the web page.--><HTML>	<BODY>		<APPLET CODE="SetApplet.class" width=600 height=150></APPLET>	</BODY></HTML>

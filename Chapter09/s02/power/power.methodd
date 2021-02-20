@@ -1,0 +1,1 @@
+	private int power(int x, int y) {		int	count,	// count==the number of multiplications done.			result; // result==1*x*x*...*x (count times), that is, 				//    result==x**count.		count = 0;		result = 1;		while (count!=y) {			result *= x;			count++;		}		// count==y, result==x**y		return result;	}

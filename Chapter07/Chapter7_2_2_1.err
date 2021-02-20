@@ -1,0 +1,2 @@
+java.lang.ArithmeticException: / by zero
+        at Chapter7_2_2_1.main(Chapter7_2_2_1.java:26)

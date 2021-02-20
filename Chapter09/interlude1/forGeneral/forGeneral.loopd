@@ -1,0 +1,1 @@
+		for (i=0, powOf2=1; i<10; i++, powOf2*=2)  // Print table of powers 							   //      of 2.			System.out.println("2 to the "+i+" is "+powOf2);
